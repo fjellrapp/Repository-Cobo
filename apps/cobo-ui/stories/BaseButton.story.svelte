@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Button from '../lib/components/button/Button.svelte';
+	import Button from '$lib/components/button/Button.svelte';
 	import type { Hst } from '@histoire/plugin-svelte';
-	import Alert from '../lib/components/icons/Alert.svelte';
-	import { ButtonTypeEnum } from '../lib/components/button/types';
+	import Alert from '$lib/components/icons/AlertIcon.svelte';
+	import { ButtonTypeEnum } from '$lib/components/button/types';
 	export let Hst: Hst;
 
 	const clickHandler = () => {
