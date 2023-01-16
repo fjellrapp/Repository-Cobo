@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="flex w-full rounded-lg bg-blue-500 p-2 shadow-lg
+	class="flex w-full rounded-lg bg-transparent filter p-2 shadow-lg
 "
 >
 	<button

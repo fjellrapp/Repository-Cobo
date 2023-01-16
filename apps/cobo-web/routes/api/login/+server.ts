@@ -1,4 +1,4 @@
-import { signIn } from '$lib/hooks/auth';
+import { signIn } from '$app/environment';
 import { json } from '@sveltejs/kit';
 import type { AxiosResponse } from 'axios';
 import type { RequestHandler } from './$types';
