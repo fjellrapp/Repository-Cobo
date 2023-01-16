@@ -173,6 +173,7 @@ importers:
       axios: ^1.2.0
       babel-loader: ^8.3.0
       classnames: ^2.3.2
+      cobo-backend: workspace:*
       cobo-ui: workspace:*
       eslint: ^8.16.0
       eslint-config-prettier: ^8.3.0
@@ -199,6 +200,7 @@ importers:
       '@felte/validator-yup': 1.0.11_yup@0.32.11
       axios: 1.2.2
       classnames: 2.3.2
+      cobo-backend: link:../cobo-backend
       cobo-ui: link:../cobo-ui
       felte: 1.2.7_svelte@3.55.1
       nookies: 2.5.2

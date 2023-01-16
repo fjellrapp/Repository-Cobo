@@ -1,8 +1,8 @@
-import { defineConfig } from 'histoire'
-import { HstSvelte } from '@histoire/plugin-svelte'
+import { defineConfig } from 'histoire';
+import { HstSvelte } from '@histoire/plugin-svelte';
 
 export default defineConfig({
-  tree: {
+	tree: {
 		groups: [
 			{
 				id: 'top',
@@ -10,8 +10,6 @@ export default defineConfig({
 			}
 		]
 	},
-  setupFile: './histoire.setup.ts',
-  plugins: [
-    HstSvelte(),
-  ],
-})
+	setupFile: './histoire.setup.ts',
+	plugins: [HstSvelte()]
+});

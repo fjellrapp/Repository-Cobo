@@ -4,10 +4,10 @@ import { HouseholdService } from './household.service';
 
 @Controller('household')
 export class HouseholdController {
-  constructor(private service: HouseholdService) {}
+	constructor(private service: HouseholdService) {}
 
-  @Post('create')
-  async create(@Body() household: Household) {
-    return household;
-  }
+	@Post('create')
+	async create(@Body() household: Household) {
+		return household;
+	}
 }

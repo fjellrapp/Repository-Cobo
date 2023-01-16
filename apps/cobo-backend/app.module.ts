@@ -4,6 +4,6 @@ import { UsersModule } from './modules/users/users.module';
 import { HouseholdModule } from './modules/household/household.module';
 
 @Module({
-  imports: [AuthModule, UsersModule, HouseholdModule],
+	imports: [AuthModule, UsersModule, HouseholdModule]
 })
 export class AppModule {}

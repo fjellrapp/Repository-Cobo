@@ -73,7 +73,7 @@
 		@apply outline-darkBlue75opacity;
 	}
 	.btn-secondary {
-		@apply bg-red hover:bg-redDarker;
+		@apply bg-transparent outline outline;
 		@apply outline-red50opacity;
 	}
 

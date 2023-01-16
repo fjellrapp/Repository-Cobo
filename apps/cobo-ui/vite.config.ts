@@ -6,8 +6,8 @@ const config: UserConfig = {
 	plugins: [sveltekit()],
 	resolve: {
 		alias: {
-			$lib: path.resolve(__dirname, './src/lib'),
-		},
+			$lib: path.resolve(__dirname, './src/lib')
+		}
 	},
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']

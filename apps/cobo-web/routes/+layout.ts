@@ -1,7 +1,7 @@
-import type { LayoutLoad } from "./$types"
+import type { LayoutLoad } from './$types';
 
 export const load: LayoutLoad = (params: any) => {
-    return {
-        route: params.route
-    }
-}
+	return {
+		route: params.route
+	};
+};

@@ -6,18 +6,18 @@ import { jwtConstants } from '../constants';
 
 @Injectable()
 export class RefreshTokenRepositoy {
-  constructor(private jwtService: JwtService) {}
-  async createRefreshToken(user: User): Promise<string> {
-    const token: RefreshToken = {
-      userGuid: '',
-      isRevoked: false,
-    };
-    token.userGuid = user.guid;
+	constructor(private jwtService: JwtService) {}
+	async createRefreshToken(user: User): Promise<string> {
+		const token: RefreshToken = {
+			userGuid: '',
+			isRevoked: false
+		};
+		token.userGuid = user.guid;
 
-    const signedToken = await this.jwtService.signAsync(token, {
-      secret: jwtConstants.refresh_secret,
-      expiresIn: '30d',
-    });
-    return signedToken;
-  }
+		const signedToken = await this.jwtService.signAsync(token, {
+			secret: jwtConstants.refresh_secret,
+			expiresIn: '30d'
+		});
+		return signedToken;
+	}
 }

@@ -6,22 +6,18 @@ import { AuthService } from '../auth.service';
 
 @Injectable()
 export class LocalStrategy extends PassportStrategy(Strategy) {
-  constructor(private moduleRef: ModuleRef) {
-    super({ passReqToCallback: true });
-  }
+	constructor(private moduleRef: ModuleRef) {
+		super({ passReqToCallback: true });
+	}
 
-  async validate(
-    request: Request,
-    username: string,
-    password: string,
-  ): Promise<any> {
-    const contextId = ContextIdFactory.getByRequest(request);
-    const authService = await this.moduleRef.resolve(AuthService, contextId);
-    console.log(authService);
-    const user = await authService.validateUser(username, password);
-    if (!user) {
-      throw new UnauthorizedException('Unauthorized. Check credentials');
-    }
-    return user;
-  }
+	async validate(request: Request, username: string, password: string): Promise<any> {
+		const contextId = ContextIdFactory.getByRequest(request);
+		const authService = await this.moduleRef.resolve(AuthService, contextId);
+		console.log(authService);
+		const user = await authService.validateUser(username, password);
+		if (!user) {
+			throw new UnauthorizedException('Unauthorized. Check credentials');
+		}
+		return user;
+	}
 }

@@ -5,20 +5,17 @@ import { ExtractJwt, Strategy } from 'passport-jwt';
 import { jwtConstants } from '../constants';
 
 @Injectable()
-export class RefreshTokenStrategy extends PassportStrategy(
-  Strategy,
-  'jwt-refresh',
-) {
-  constructor() {
-    super({
-      jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-      secretOrKey: jwtConstants.refresh_secret,
-      passReqToCallback: true,
-    });
-  }
+export class RefreshTokenStrategy extends PassportStrategy(Strategy, 'jwt-refresh') {
+	constructor() {
+		super({
+			jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+			secretOrKey: jwtConstants.refresh_secret,
+			passReqToCallback: true
+		});
+	}
 
-  async validate(req: Request, payload: any) {
-    const refreshToken = req.get('Authorization').replace('Bearer', '').trim();
-    return { ...payload, refreshToken };
-  }
+	async validate(req: Request, payload: any) {
+		const refreshToken = req.get('Authorization').replace('Bearer', '').trim();
+		return { ...payload, refreshToken };
+	}
 }

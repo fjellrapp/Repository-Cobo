@@ -12,16 +12,16 @@ import { AccessTokenStrategy } from './strategy/jwt.strategy';
 import { LocalStrategy } from './strategy/local.strategy';
 
 @Module({
-  imports: [UsersModule, PassportModule, JwtModule.register({})],
-  controllers: [AuthController],
-  providers: [
-    AuthService,
-    BCryptService,
-    LocalStrategy,
-    AccessTokenStrategy,
-    RefreshTokenStrategy,
-    AccessTokenRepository,
-    RefreshTokenRepositoy,
-  ],
+	imports: [UsersModule, PassportModule, JwtModule.register({})],
+	controllers: [AuthController],
+	providers: [
+		AuthService,
+		BCryptService,
+		LocalStrategy,
+		AccessTokenStrategy,
+		RefreshTokenStrategy,
+		AccessTokenRepository,
+		RefreshTokenRepositoy
+	]
 })
 export class AuthModule {}

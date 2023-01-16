@@ -10,17 +10,17 @@ import { UsersRepository } from './users.repository';
 import { UsersService } from './users.service';
 
 @Module({
-  providers: [
-    PrismaService,
-    UsersService,
-    BCryptService,
-    UsersRepository,
-    AuthService,
-    JwtService,
-    RefreshTokenRepositoy,
-    AccessTokenRepository,
-  ],
-  controllers: [UsersController],
-  exports: [UsersService],
+	providers: [
+		PrismaService,
+		UsersService,
+		BCryptService,
+		UsersRepository,
+		AuthService,
+		JwtService,
+		RefreshTokenRepositoy,
+		AccessTokenRepository
+	],
+	controllers: [UsersController],
+	exports: [UsersService]
 })
 export class UsersModule {}

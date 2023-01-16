@@ -10,7 +10,10 @@
 	export let isOpen: boolean = false;
 </script>
 
-<div class="flex">
+<div
+	class="flex w-full rounded-lg bg-blue-500 p-2 shadow-lg
+"
+>
 	<button
 		class="flex w-full items-center justify-center rounded-md px-4 py-2 text-left text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
 		class:active
