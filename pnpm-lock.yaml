@@ -114,13 +114,10 @@ importers:
       '@sveltejs/adapter-auto': ^1.0.0
       '@sveltejs/kit': ^1.0.0
       '@sveltejs/package': ^1.0.0
-      '@typescript-eslint/eslint-plugin': ^5.45.0
-      '@typescript-eslint/parser': ^5.45.0
       autoprefixer: ^10.4.13
       classnames: ^2.3.2
       eslint: ^8.28.0
-      eslint-config-prettier: ^8.5.0
-      eslint-plugin-svelte3: ^4.0.0
+      eslint-config-custom: workspace:*
       histoire: ^0.12.4
       postcss: ^8.4.21
       prettier: ^2.8.0
@@ -142,12 +139,9 @@ importers:
       '@sveltejs/adapter-auto': 1.0.1_@sveltejs+kit@1.1.1
       '@sveltejs/kit': 1.1.1_svelte@3.55.1+vite@4.0.4
       '@sveltejs/package': 1.0.2_atrrhq7vg4ekua4nnyrpuardle
-      '@typescript-eslint/eslint-plugin': 5.48.1_oomjohfipuyaxs2zyomcx4f5by
-      '@typescript-eslint/parser': 5.48.1_7uibuqfxkfaozanbtbziikiqje
       autoprefixer: 10.4.13_postcss@8.4.21
       eslint: 8.32.0
-      eslint-config-prettier: 8.6.0_eslint@8.32.0
-      eslint-plugin-svelte3: 4.0.0_tmo5zkisvhu6htudosk5k7m6pu
+      eslint-config-custom: link:../../packages/eslint-config-custom
       histoire: 0.12.4_sass@1.57.1+vite@4.0.4
       postcss: 8.4.21
       prettier: 2.8.3
@@ -170,8 +164,6 @@ importers:
       '@sveltejs/adapter-auto': next
       '@sveltejs/kit': 1.0.0
       '@sveltejs/vite-plugin-svelte': ^2.0.0
-      '@typescript-eslint/eslint-plugin': ^5.27.0
-      '@typescript-eslint/parser': ^5.27.0
       autoprefixer: ^10.4.13
       axios: ^1.2.0
       babel-loader: ^8.3.0
@@ -179,9 +171,7 @@ importers:
       cobo-backend: workspace:*
       cobo-ui: workspace:*
       eslint: ^8.16.0
-      eslint-config-prettier: ^8.3.0
-      eslint-plugin-storybook: ^0.6.7
-      eslint-plugin-svelte3: ^4.0.0
+      eslint-config-custom: workspace:*
       felte: ^1.2.6
       nookies: ^2.5.2
       postcss: ^8.4.19
@@ -215,14 +205,10 @@ importers:
       '@sveltejs/adapter-auto': 1.0.0-next.91_@sveltejs+kit@1.0.0
       '@sveltejs/kit': 1.0.0_svelte@3.55.1+vite@4.0.4
       '@sveltejs/vite-plugin-svelte': 2.0.2_svelte@3.55.1+vite@4.0.4
-      '@typescript-eslint/eslint-plugin': 5.48.1_oomjohfipuyaxs2zyomcx4f5by
-      '@typescript-eslint/parser': 5.48.1_7uibuqfxkfaozanbtbziikiqje
       autoprefixer: 10.4.13_postcss@8.4.21
       babel-loader: 8.3.0_la66t7xldg4uecmyawueag5wkm
       eslint: 8.32.0
-      eslint-config-prettier: 8.6.0_eslint@8.32.0
-      eslint-plugin-storybook: 0.6.10_7uibuqfxkfaozanbtbziikiqje
-      eslint-plugin-svelte3: 4.0.0_tmo5zkisvhu6htudosk5k7m6pu
+      eslint-config-custom: link:../../packages/eslint-config-custom
       postcss: 8.4.21
       postcss-load-config: 4.0.1_postcss@8.4.21
       prettier: 2.8.3
@@ -1663,12 +1649,6 @@ packages:
     resolution: {integrity: sha512-BPS4ynJW/o92PUR4wgriz2Ud5gpST5vz6GQfMixEDK0Z8ZCUv2M7SkBLykH56T++Xs+8ln9zTGbOvNGIe02/jw==}
     dependencies:
       '@sinonjs/commons': 1.8.6
-    dev: true
-
-  /@storybook/csf/0.0.1:
-    resolution: {integrity: sha512-USTLkZze5gkel8MYCujSRBVIrUQ3YPBrLOx7GNk/0wttvVtlzWXAq9eLbQ4p/NicGxP+3T7KPEMVV//g+yubpw==}
-    dependencies:
-      lodash: 4.17.21
     dev: true
 
   /@sveltejs/adapter-auto/1.0.0-next.91_@sveltejs+kit@1.0.0:
@@ -3524,22 +3504,6 @@ packages:
       prettier-linter-helpers: 1.0.0
     dev: true
 
-  /eslint-plugin-storybook/0.6.10_7uibuqfxkfaozanbtbziikiqje:
-    resolution: {integrity: sha512-3DKXRey06EhwnTKaG6fgMqGTy4C3z6Ikyv6VVixO5BvaExWQe3yGWIAufrC2Et0OaAMIaMwx9KWjqb/Wq+JxPg==}
-    engines: {node: 12.x || 14.x || >= 16}
-    peerDependencies:
-      eslint: '>=6'
-    dependencies:
-      '@storybook/csf': 0.0.1
-      '@typescript-eslint/utils': 5.48.1_7uibuqfxkfaozanbtbziikiqje
-      eslint: 8.32.0
-      requireindex: 1.2.0
-      ts-dedent: 2.2.0
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: true
-
   /eslint-plugin-svelte3/4.0.0_tmo5zkisvhu6htudosk5k7m6pu:
     resolution: {integrity: sha512-OIx9lgaNzD02+MDFNLw0GEUbuovNcglg+wnd/UY0fbZmlQSz7GlQiQ1f+yX0XvC07XPcDOnFcichqI3xCwp71g==}
     peerDependencies:
@@ -3548,6 +3512,7 @@ packages:
     dependencies:
       eslint: 8.32.0
       svelte: 3.55.1
+    dev: false
 
   /eslint-plugin-turbo/0.0.7_eslint@8.32.0:
     resolution: {integrity: sha512-iajOH8eD4jha3duztGVBD1BEmvNrQBaA/y3HFHf91vMDRYRwH7BpHSDFtxydDpk5ghlhRxG299SFxz7D6z4MBQ==}
@@ -6263,11 +6228,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /requireindex/1.2.0:
-    resolution: {integrity: sha512-L9jEkOi3ASd9PYit2cwRfyppc9NoABujTP8/5gFcbERmo5jUoAKovIC3fsF17pkTnGsrByysqX+Kxd2OTNI1ww==}
-    engines: {node: '>=0.10.5'}
-    dev: true
-
   /requires-port/1.0.0:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
     dev: true
@@ -7197,11 +7157,6 @@ packages:
   /tree-kill/1.2.2:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
     hasBin: true
-    dev: true
-
-  /ts-dedent/2.2.0:
-    resolution: {integrity: sha512-q5W7tVM71e2xjHZTlgfTDoPF/SmqKG5hddq9SzR49CH2hayqRKJtQ4mtRlSxKaJlR/+9rEM+mnBHf7I2/BQcpQ==}
-    engines: {node: '>=6.10'}
     dev: true
 
   /ts-jest/28.0.8_ea2rtatxj6w4qpnwak3ijkzgwi:
